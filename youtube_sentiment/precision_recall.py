@@ -98,7 +98,7 @@ def predict_sentiments3(train, dev, test):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Precision-Recall Curve for LogisticRegression on dev data')
-    plt.legend(lines, labels, loc=(0, -.38), prop=dict(size=12))
+    plt.legend(lines, labels, prop=dict(size=10))
     plt.savefig('PrecisionRecall_LogisticRegression_dev.png')
     plt.show()
 
@@ -133,7 +133,7 @@ def predict_sentiments3(train, dev, test):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Precision-Recall Curve for LogisticRegression on test data')
-    plt.legend(lines, labels, loc=(0, -.38), prop=dict(size=12))
+    plt.legend(lines, labels, prop=dict(size=10))
     plt.savefig('PrecisionRecall_LogisticRegression_test.png')
     plt.show()
 
@@ -207,7 +207,7 @@ def predict_sentiments3(train, dev, test):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Precision-Recall Curve for RidgeClassifier on dev data')
-    plt.legend(lines, labels, loc=(0, -.38), prop=dict(size=12))
+    plt.legend(lines, labels, prop=dict(size=10))
     plt.savefig('PrecisionRecall_RidgeClassifier_dev.png')
     plt.show()
 
@@ -242,7 +242,7 @@ def predict_sentiments3(train, dev, test):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Precision-Recall Curve for RidgeClassifier on test data')
-    plt.legend(lines, labels, loc=(0, -.38), prop=dict(size=12))
+    plt.legend(lines, labels, prop=dict(size=10))
     plt.savefig('PrecisionRecall_RidgeClassifier_test.png')
     plt.show()
 
@@ -321,7 +321,7 @@ def predict_sentiments3(train, dev, test):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Precision-Recall Curve for LinearSVC on dev data')
-    plt.legend(lines, labels, loc=(0, -.38), prop=dict(size=12))
+    plt.legend(lines, labels, prop=dict(size=10))
     plt.savefig('PrecisionRecall_LinearSVC_dev.png')
     plt.show()
 
@@ -357,7 +357,7 @@ def predict_sentiments3(train, dev, test):
     plt.xlabel('Recall')
     plt.ylabel('Precision')
     plt.title('Precision-Recall Curve for LinearSVC on test data')
-    plt.legend(lines, labels, loc=(0, -.38), prop=dict(size=12))
+    plt.legend(lines, labels, prop=dict(size=10))
     plt.savefig('PrecisionRecall_LinearSVC_test.png')
     plt.show()
 
