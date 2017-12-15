@@ -1,5 +1,21 @@
 \section{Related Work}
 \label{sec:rel}
-In [1] recommendation of tags is done automatically by training a classifier that maps audiovisual features from millions of you-tube video to supplied tags by an uploader of video. The system learns a vocabulary of tags and suggests tags which are relevant to the video. A detailed analysis of usefulness of comment is presented in [2] including influence of comment sentiment on rating of the comment using SentiWordNet theasures. They also predict the community acceptance of an unrated comment using svm classification and term based representation  of comments to categorize a comment as \textit{accepted} or \textit{not accepted}. Other work on sentiment classification and opinion mining [3] deals with assigning positive, negative or neutral sentiment to a text using text orientation and linguistic features. 
-In our project we do sentiment analysis using four different classification models. In addition to this we do Category prediction based on comments and tags.
-[1]
+?Hu and Liu ~\cite{HuM} summarized a list of positive and negative words based on customer reviews.
+The positive list contains 2006 words and the negative list has 4783 words. Both lists also include some misspelled words that are frequently present in social media content.
+Sentiment categorization is essentially a classification problem, where features that contain opinions or sentiment information should be identified before the classification.
+For feature selection, Pang and Lee ~\cite{PangLee}suggested to remove objective sentences by extracting subjective ones.
+They proposed a text-categorization technique that is able to identify subjective content using minimum cut.
+Gann ~\cite{Gann} selected 6,799 tokens based on Twitter data, where each token is assigned a sentiment score, namely TSI(Total Sentiment Index), featuring itself as a positive token or a negative token.
+Specifically, a TSI for a certain token is computed as:
+$$TSI=\frac{p-\frac{t_p}{t_n} \times n}{p+\frac{t_p}{t_n}*n}$$
+
+where p is the number of times a token appears in positive tweets and n is the number of times a token appears in negative tweets.
+In ~\cite{ tagRecCatDis} recommendation of tags is done automatically by training a classifier that maps audiovisual features from millions of you-tube video to supplied tags by an uploader of video.
+The system learns a vocabulary of tags and suggests tags which are relevant to the video.
+A detailed analysis of usefulness of comment is presented in ~\cite{ Siersdorfer:2010:UYC:1772690.1772781} including influence of comment sentiment on rating of the comment using SentiWordNet theasures.
+They also predict the community acceptance of an unrated comment using svm classification and term based representation  of comments to categorize a comment as  ?accepted? or ?not accepted?.
+Other work on sentiment classification and opinion mining ~\cite{thumbsup} deals with assigning positive, negative or neutral sentiment to a text using text orientation and linguistic features.
+Lots of work is done on classification using probabilistic and discriminative models ~\cite{Chakrabarti} and learning regression and ranking functions ~\cite{Smola} .
+The popular SVM Light software package ~\cite{Joachims} provides various kinds of parameterizations and variations of SVM training (e.g., binary classification, SVM regression and ranking, transductive SVMs, etc.).
+In our project we apply these techniques in a novel context to automatic classification of comment using four different classification models.
+In addition to this we do Category prediction based on comments and tags.
