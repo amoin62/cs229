@@ -1,26 +1,25 @@
-\documentclass[11pt]{llncs}
-\usepackage{geometry}
-\geometry{
-  a4paper,         % or letterpaper
-  textwidth=15cm,  % llncs has 12.2cm
-  textheight=24cm, % llncs has 19.3cm
-  heightrounded,   % integer number of lines
-  hratio=1:1,      % horizontally centered
-  vratio=2:3,      % not vertically centered
-}
-\usepackage{graphicx}
-\usepackage{amsmath}
-\usepackage{amsfonts}
+\documentclass{vgtc}
+
+\usepackage{amsmath, url, graphicx, algorithm, ctable, times}
+\usepackage{algpseudocode}
+%\makeatletter
+%\renewcommand{\ALG@beginalgorithmic}{\small}
+%\makeatother
+
+\usepackage[caption=false]{subfig}
+%\marginsize{1.5cm}{1.5cm}{1cm}{1cm}
+\captionsetup{font = scriptsize}
+%\makesavenoteenv{tabular}
+
 
 \begin{document}
 
 \pagestyle{empty} 
 \title{Content Analysis For Online MultiMedia}
-\author{Afshin Moin (afshinm)\institute{}
-\and
-Abhishek Bharani (abharani)\institute{}
-\and 
-Peng Seng Kuok (pkuok)\institute{}
+
+\author{Afshin Moin (afshinm) \\ 
+\and Peng Seng Kuok (pkuok) \\
+\and Abhishek Bharani (abharani)
 }
 
 \maketitle
@@ -34,7 +33,6 @@ Peng Seng Kuok (pkuok)\institute{}
 \pagestyle{plain}
 \bibliographystyle{abbrv}
 \bibliography{biblio}
-
 \input{contribution}
 
 \end{document}

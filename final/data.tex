@@ -19,34 +19,30 @@ The data includes comment data and video data. The comment data maps video IDs t
 
 \subsection{Label Generation}
 \label{sec:label}
-Our goal is to classify YouTube comments into positive, negative or neutral sentiment classes. However, there are no labels showing the sentiment of the comments. Considering the large number of comments, it was not possible for us to manually label a reasonable fraction of this dataset. Consequently, we used the TextBlob~\cite{textblob} library for Python to generate the labels. TextBlob applies NLP (Natural Language Processing) techniques to estimate the \textbf{polarity} of each comment independently from the rest of the comments, and only based on its content. For us, it replaces the burdensome task of manual labeling. TextBlob generates polarity scores in the range of $(-1,1)$. We convert them into categorical data using Equation~\ref{eq:sentiment}. Statistics on the size of each class is shown in Figure~\ref{fig:datastats}.
-\begin{eqnarray}
+Our goal is to classify YouTube comments into positive, negative or neutral sentiment classes. However, there are no labels showing the sentiment of the comments. Considering the large number of comments, it was not possible for us to manually label a reasonable fraction of this dataset. Consequently, we used the TextBlob~\cite{textblob} library for Python to generate the labels. TextBlob applies NLP (Natural Language Processing) techniques to estimate the \textbf{polarity} of each comment independently from the rest of the comments, and only based on its content. For us, it replaces the burdensome task of manual labeling. TextBlob generates polarity scores in the range of $(-1,1)$. We convert them into categorical data using the following equation.
+\begin{eqnarray*}
 \textrm{sentiment}=
 \begin{cases}
 -1 & \textrm{polarity} < 0\\
 0 & \textrm{polarity} = 0\\
 1 & \textrm{polarity} > 0
-\end{cases}
+\end{cases}.
 \label{eq:sentiment}
-\end{eqnarray}
+\end{eqnarray*}
+Statistics on the size of each class is shown in Figure~\ref{fig:datastats}.
 Words that happen more frequently in positive and negative comments are shown as word clouds in Figures~\ref{fig:poscloud} and~\ref{fig:negcloud}.
-
 In Section~\ref{sec:cat-exp}, we do category classification based on tags and comments. The category labels are already available in video data.
-\begin{figure}[h]
+
+\begin{figure*}[tb]%
 \centering
-\begin{minipage}{0.49\textwidth}
-\centering
-\includegraphics[width=1.0\linewidth]{figures/pos_WordCloud.png}
-\caption{Word cloud for positive comments.}
-\label{fig:poscloud}
-\end{minipage}
-\begin{minipage}{0.49\textwidth}
-\centering
-\includegraphics[width=1.0\linewidth]{figures/neg_WordCloud.png}
-\caption{Word cloud for negative comments.}
-\label{fig:negcloud}
-\end{minipage}
-\end{figure}
+\begin{tabular}{cc}
+\subfloat[Word cloud for positive comments \label{fig:poscloud}]{\includegraphics[width=0.95\columnwidth]{figures/pos_WordCloud.png}} & 
+\subfloat[Word cloud for negative comments \label{fig:negcloud}]{\includegraphics[width=0.95\columnwidth]{figures/neg_WordCloud.png}}
+\end{tabular}
+\caption{Word cloud of common words in YouTube comments}
+\label{fig:wordcloud}
+\end{figure*}
+
 
 \subsection{Feature Extraction}
 \label{sec:feature}
