@@ -10,13 +10,15 @@ from sklearn.calibration import calibration_curve
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import average_precision_score
 from sklearn.preprocessing import label_binarize
+from itertools import cycle
+from sentiment import read_data, fit_clf
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import sys
-from itertools import cycle
 
-def predict_sentiments3(train, dev, test):
+
+def predict_sentiments(train, dev, test):
     y_column = 'binary_sentiment'
     train_comments, train_y = read_data(train, y_column)
     dev_comments, dev_y = read_data(dev, y_column)
@@ -367,23 +369,13 @@ def predict_sentiments3(train, dev, test):
 
 def main():
     fields = ['comment_text', 'binary_sentiment']
-    #train = pd.read_csv('../data/youtube/USComments-train-full.csv', encoding='utf-8', error_bad_lines=False, usecols=fields)
-    train = pd.read_csv('C:/Users/PengSeng/Desktop/CS 229 Machine Learning/Project/data/youtube/USComments-train-full.csv', encoding='utf8', error_bad_lines=False)
-    test = pd.read_csv('C:/Users/PengSeng/Desktop/CS 229 Machine Learning/Project/data/youtube/USComments-test-full.csv', encoding='utf8', error_bad_lines=False)
-    dev = pd.read_csv('C:/Users/PengSeng/Desktop/CS 229 Machine Learning/Project/data/youtube/GBComments-test.csv', encoding='utf8', error_bad_lines=False)
+    train = pd.read_csv('../data/youtube/USComments-train-full.csv', encoding='utf8', error_bad_lines=False, usecols=fields)
+    test = pd.read_csv('../data/youtube/USComments-test-full.csv', encoding='utf8', error_bad_lines=False, usecols=fields)
+    dev = pd.read_csv('../data/youtube/GBComments-test.csv', encoding='utf8', error_bad_lines=False, usecols=fields)
 
-    #predict_sentiments(train, dev, test)
-    calibration = False
     precison_recall = True
-    dimensions = None
-    if calibration:
-        train = train[train.binary_sentiment != 0]
-        dev = dev[dev.binary_sentiment != 0]
-        test = test[test.binary_sentiment != 0]
-    predict_sentiments2(train, dev, test, dimensions=dimensions, calibration=calibration)
-
     if precison_recall:
-        predict_sentiments3(train, dev, test)
+        predict_sentiments(train, dev, test)
 if __name__ == '__main__':
     main()
 
