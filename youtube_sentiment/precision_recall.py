@@ -102,6 +102,8 @@ def predict_sentiments3(train, dev, test):
     plt.savefig('PrecisionRecall_LogisticRegression_dev.png')
     plt.show()
 
+    # setup plot details test data
+
     colors = cycle(['navy', 'turquoise', 'darkorange', 'cornflowerblue', 'teal'])
 
     plt.figure(figsize=(7, 8))
@@ -175,7 +177,7 @@ def predict_sentiments3(train, dev, test):
     test_precision["micro"], test_recall["micro"], _  = precision_recall_curve(test_y_binarize.ravel(), test_score.ravel())
     print ('RidgeClassifier Test Average Precision Score, micro-averaged over all classes : {0:0.3f}'.format(test_avg_precision["micro"]))
 
-    # setup plot details test data
+    # setup plot details dev data
     colors = cycle(['navy', 'turquoise', 'darkorange', 'cornflowerblue', 'teal'])
 
     plt.figure(figsize=(7, 8))
@@ -211,6 +213,7 @@ def predict_sentiments3(train, dev, test):
     plt.savefig('PrecisionRecall_RidgeClassifier_dev.png')
     plt.show()
 
+    # setup plot details test data
     colors = cycle(['navy', 'turquoise', 'darkorange', 'cornflowerblue', 'teal'])
 
     plt.figure(figsize=(7, 8))
