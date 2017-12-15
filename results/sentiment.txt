@@ -1,0 +1,23 @@
+C:\Users\Afshin\Documents\mlvenv\Scripts\python.exe C:/Users/Afshin/Documents/CS229_Machine_Learning_Stanford_2017/cs229-project/cs229/youtube_sentiment/sentiment.py
+Fitting LogisticRegression
+Training time of LogisticRegression = 126.224698
+LogisticRegression Train Accuracy = 0.957846
+LogisticRegression Dev Accuracy = 0.948769
+LogisticRegression Test Accuracy = 0.946066
+Fitting RidgeClassifier
+Training time of RidgeClassifier = 47.608889
+RidgeClassifier Train Accuracy = 0.941941
+RidgeClassifier Dev Accuracy = 0.913585
+RidgeClassifier Test Accuracy = 0.906416
+Fitting BernoulliNB
+Training time of BernoulliNB = 0.456548
+BernoulliNB Train Accuracy = 0.728482
+BernoulliNB Dev Accuracy = 0.715798
+BernoulliNB Test Accuracy = 0.721152
+Fitting LinearSVC
+Training time of LinearSVC = 65.892295
+LinearSVC Train Accuracy = 0.971205
+LinearSVC Dev Accuracy = 0.956749
+LinearSVC Test Accuracy = 0.952674
+
+Process finished with exit code 0

@@ -1,0 +1,315 @@
+C:\Users\Afshin\Documents\mlvenv\Scripts\python.exe C:/Users/Afshin/Documents/CS229_Machine_Learning_Stanford_2017/cs229-project/cs229/youtube_sentiment/tags.py
+train csv read
+dev csv read
+dev csv read
+Number of categories = 15
+Number of categories = 15
+Number of categories used = 2
+Fitting LogisticRegression
+Execution time = 0.083383
+('LogisticRegression Train Accuracy = ', 1.0)
+('LogisticRegression Dev Accuracy = ', 0.90000000000000002)
+('LogisticRegression Test Accuracy = ', 0.89915966386554624)
+Fitting RidgeClassifier
+Execution time = 0.050692
+('RidgeClassifier Train Accuracy = ', 1.0)
+('RidgeClassifier Dev Accuracy = ', 0.90833333333333333)
+('RidgeClassifier Test Accuracy = ', 0.90756302521008403)
+Fitting BernoulliNB
+Execution time = 0.057008
+('BernoulliNB Train Accuracy = ', 0.95081967213114749)
+('BernoulliNB Dev Accuracy = ', 0.82499999999999996)
+('BernoulliNB Test Accuracy = ', 0.92436974789915971)
+Fitting LinearSVC
+Execution time = 0.091118
+('LinearSVC Train Accuracy = ', 1.0)
+('LinearSVC Dev Accuracy = ', 0.89166666666666672)
+('LinearSVC Test Accuracy = ', 0.91596638655462181)
+Number of categories = 15
+Number of categories used = 3
+Fitting LogisticRegression
+Execution time = 0.106759
+('LogisticRegression Train Accuracy = ', 1.0)
+('LogisticRegression Dev Accuracy = ', 0.89240506329113922)
+('LogisticRegression Test Accuracy = ', 0.8834355828220859)
+Fitting RidgeClassifier
+Execution time = 0.089625
+('RidgeClassifier Train Accuracy = ', 1.0)
+('RidgeClassifier Dev Accuracy = ', 0.89240506329113922)
+('RidgeClassifier Test Accuracy = ', 0.90184049079754602)
+Fitting BernoulliNB
+Execution time = 0.048856
+('BernoulliNB Train Accuracy = ', 0.91448275862068962)
+('BernoulliNB Dev Accuracy = ', 0.810126582278481)
+('BernoulliNB Test Accuracy = ', 0.88957055214723924)
+Fitting LinearSVC
+Execution time = 0.042097
+('LinearSVC Train Accuracy = ', 1.0)
+('LinearSVC Dev Accuracy = ', 0.89240506329113922)
+('LinearSVC Test Accuracy = ', 0.90184049079754602)
+Number of categories = 15
+Number of categories used = 4
+Fitting LogisticRegression
+Execution time = 0.147670
+('LogisticRegression Train Accuracy = ', 1.0)
+('LogisticRegression Dev Accuracy = ', 0.80628272251308897)
+('LogisticRegression Test Accuracy = ', 0.79126213592233008)
+Fitting RidgeClassifier
+Execution time = 0.153952
+('RidgeClassifier Train Accuracy = ', 0.99883585564610011)
+('RidgeClassifier Dev Accuracy = ', 0.79057591623036649)
+('RidgeClassifier Test Accuracy = ', 0.80582524271844658)
+Fitting BernoulliNB
+Execution time = 0.046465
+('BernoulliNB Train Accuracy = ', 0.84284051222351575)
+('BernoulliNB Dev Accuracy = ', 0.67015706806282727)
+('BernoulliNB Test Accuracy = ', 0.70873786407766992)
+Fitting LinearSVC
+Execution time = 0.053307
+('LinearSVC Train Accuracy = ', 0.99883585564610011)
+('LinearSVC Dev Accuracy = ', 0.81151832460732987)
+('LinearSVC Test Accuracy = ', 0.81553398058252424)
+Number of categories = 15
+Number of categories used = 5
+Fitting LogisticRegression
+Execution time = 0.188357
+('LogisticRegression Train Accuracy = ', 0.999)
+('LogisticRegression Dev Accuracy = ', 0.7946428571428571)
+('LogisticRegression Test Accuracy = ', 0.77542372881355937)
+Fitting RidgeClassifier
+Execution time = 0.186093
+('RidgeClassifier Train Accuracy = ', 0.998)
+('RidgeClassifier Dev Accuracy = ', 0.78125)
+('RidgeClassifier Test Accuracy = ', 0.79661016949152541)
+Fitting BernoulliNB
+Execution time = 0.051468
+('BernoulliNB Train Accuracy = ', 0.78900000000000003)
+('BernoulliNB Dev Accuracy = ', 0.625)
+('BernoulliNB Test Accuracy = ', 0.65677966101694918)
+Fitting LinearSVC
+Execution time = 0.065570
+('LinearSVC Train Accuracy = ', 0.998)
+('LinearSVC Dev Accuracy = ', 0.7901785714285714)
+('LinearSVC Test Accuracy = ', 0.80508474576271183)
+Number of categories = 15
+Number of categories used = 6
+Fitting LogisticRegression
+Execution time = 0.254703
+('LogisticRegression Train Accuracy = ', 0.99911971830985913)
+('LogisticRegression Dev Accuracy = ', 0.7967479674796748)
+('LogisticRegression Test Accuracy = ', 0.76806083650190116)
+Fitting RidgeClassifier
+Execution time = 0.208435
+('RidgeClassifier Train Accuracy = ', 0.9973591549295775)
+('RidgeClassifier Dev Accuracy = ', 0.78861788617886175)
+('RidgeClassifier Test Accuracy = ', 0.79467680608365021)
+Fitting BernoulliNB
+Execution time = 0.058029
+('BernoulliNB Train Accuracy = ', 0.71830985915492962)
+('BernoulliNB Dev Accuracy = ', 0.56504065040650409)
+('BernoulliNB Test Accuracy = ', 0.5855513307984791)
+Fitting LinearSVC
+Execution time = 0.095592
+('LinearSVC Train Accuracy = ', 0.99823943661971826)
+('LinearSVC Dev Accuracy = ', 0.79268292682926833)
+('LinearSVC Test Accuracy = ', 0.79847908745247154)
+Number of categories = 15
+Number of categories used = 7
+Fitting LogisticRegression
+Execution time = 0.324553
+('LogisticRegression Train Accuracy = ', 0.99919484702093397)
+('LogisticRegression Dev Accuracy = ', 0.77735849056603779)
+('LogisticRegression Test Accuracy = ', 0.74551971326164879)
+Fitting RidgeClassifier
+Execution time = 0.302691
+('RidgeClassifier Train Accuracy = ', 0.9967793880837359)
+('RidgeClassifier Dev Accuracy = ', 0.77358490566037741)
+('RidgeClassifier Test Accuracy = ', 0.77777777777777779)
+Fitting BernoulliNB
+Execution time = 0.057461
+('BernoulliNB Train Accuracy = ', 0.6561996779388084)
+('BernoulliNB Dev Accuracy = ', 0.52452830188679245)
+('BernoulliNB Test Accuracy = ', 0.54121863799283154)
+Fitting LinearSVC
+Execution time = 0.095215
+('LinearSVC Train Accuracy = ', 0.9967793880837359)
+('LinearSVC Dev Accuracy = ', 0.78867924528301891)
+('LinearSVC Test Accuracy = ', 0.77777777777777779)
+Number of categories = 15
+Number of categories used = 8
+Fitting LogisticRegression
+Execution time = 0.594482
+('LogisticRegression Train Accuracy = ', 0.99925373134328355)
+('LogisticRegression Dev Accuracy = ', 0.77543859649122804)
+('LogisticRegression Test Accuracy = ', 0.7558528428093646)
+Fitting RidgeClassifier
+Execution time = 0.321711
+('RidgeClassifier Train Accuracy = ', 0.9955223880597015)
+('RidgeClassifier Dev Accuracy = ', 0.77543859649122804)
+('RidgeClassifier Test Accuracy = ', 0.77926421404682278)
+Fitting BernoulliNB
+Execution time = 0.069789
+('BernoulliNB Train Accuracy = ', 0.61194029850746268)
+('BernoulliNB Dev Accuracy = ', 0.49473684210526314)
+('BernoulliNB Test Accuracy = ', 0.47491638795986624)
+Fitting LinearSVC
+Execution time = 0.123962
+('LinearSVC Train Accuracy = ', 0.9955223880597015)
+('LinearSVC Dev Accuracy = ', 0.78245614035087718)
+('LinearSVC Test Accuracy = ', 0.78260869565217395)
+Number of categories = 15
+Number of categories used = 9
+Fitting LogisticRegression
+Execution time = 0.868808
+('LogisticRegression Train Accuracy = ', 0.99857142857142855)
+('LogisticRegression Dev Accuracy = ', 0.75)
+('LogisticRegression Test Accuracy = ', 0.72292993630573243)
+Fitting RidgeClassifier
+Execution time = 0.352537
+('RidgeClassifier Train Accuracy = ', 0.995)
+('RidgeClassifier Dev Accuracy = ', 0.75)
+('RidgeClassifier Test Accuracy = ', 0.74522292993630568)
+Fitting BernoulliNB
+Execution time = 0.071700
+('BernoulliNB Train Accuracy = ', 0.57428571428571429)
+('BernoulliNB Dev Accuracy = ', 0.46000000000000002)
+('BernoulliNB Test Accuracy = ', 0.44904458598726116)
+Fitting LinearSVC
+Execution time = 0.123209
+('LinearSVC Train Accuracy = ', 0.995)
+('LinearSVC Dev Accuracy = ', 0.75666666666666671)
+('LinearSVC Test Accuracy = ', 0.75159235668789814)
+Number of categories = 15
+Number of categories used = 10
+Fitting LogisticRegression
+Execution time = 0.975949
+('LogisticRegression Train Accuracy = ', 0.99863201094391241)
+('LogisticRegression Dev Accuracy = ', 0.73968253968253972)
+('LogisticRegression Test Accuracy = ', 0.71913580246913578)
+Fitting RidgeClassifier
+Execution time = 0.409424
+('RidgeClassifier Train Accuracy = ', 0.99521203830369354)
+('RidgeClassifier Dev Accuracy = ', 0.73650793650793656)
+('RidgeClassifier Test Accuracy = ', 0.74691358024691357)
+Fitting BernoulliNB
+Execution time = 0.084035
+('BernoulliNB Train Accuracy = ', 0.53556771545827631)
+('BernoulliNB Dev Accuracy = ', 0.42857142857142855)
+('BernoulliNB Test Accuracy = ', 0.41666666666666669)
+Fitting LinearSVC
+Execution time = 0.146107
+('LinearSVC Train Accuracy = ', 0.99521203830369354)
+('LinearSVC Dev Accuracy = ', 0.74920634920634921)
+('LinearSVC Test Accuracy = ', 0.74691358024691357)
+Number of categories = 15
+Number of categories used = 11
+Fitting LogisticRegression
+Execution time = 0.911092
+('LogisticRegression Train Accuracy = ', 0.9986550100874243)
+('LogisticRegression Dev Accuracy = ', 0.72981366459627328)
+('LogisticRegression Test Accuracy = ', 0.72560975609756095)
+Fitting RidgeClassifier
+Execution time = 0.426936
+('RidgeClassifier Train Accuracy = ', 0.99529253530598516)
+('RidgeClassifier Dev Accuracy = ', 0.72981366459627328)
+('RidgeClassifier Test Accuracy = ', 0.73780487804878048)
+Fitting BernoulliNB
+Execution time = 0.070663
+('BernoulliNB Train Accuracy = ', 0.51983860121049097)
+('BernoulliNB Dev Accuracy = ', 0.41614906832298137)
+('BernoulliNB Test Accuracy = ', 0.40853658536585363)
+Fitting LinearSVC
+Execution time = 0.112905
+('LinearSVC Train Accuracy = ', 0.99529253530598516)
+('LinearSVC Dev Accuracy = ', 0.74534161490683226)
+('LinearSVC Test Accuracy = ', 0.74085365853658536)
+Number of categories = 15
+Number of categories used = 12
+Fitting LogisticRegression
+Execution time = 1.060770
+('LogisticRegression Train Accuracy = ', 0.99867724867724872)
+('LogisticRegression Dev Accuracy = ', 0.72256097560975607)
+('LogisticRegression Test Accuracy = ', 0.71471471471471471)
+Fitting RidgeClassifier
+Execution time = 0.487136
+('RidgeClassifier Train Accuracy = ', 0.99537037037037035)
+('RidgeClassifier Dev Accuracy = ', 0.73170731707317072)
+('RidgeClassifier Test Accuracy = ', 0.73873873873873874)
+Fitting BernoulliNB
+Execution time = 0.072486
+('BernoulliNB Train Accuracy = ', 0.50529100529100535)
+('BernoulliNB Dev Accuracy = ', 0.39634146341463417)
+('BernoulliNB Test Accuracy = ', 0.39339339339339341)
+Fitting LinearSVC
+Execution time = 0.125201
+('LinearSVC Train Accuracy = ', 0.99537037037037035)
+('LinearSVC Dev Accuracy = ', 0.73780487804878048)
+('LinearSVC Test Accuracy = ', 0.73873873873873874)
+Number of categories = 15
+Number of categories used = 13
+Fitting LogisticRegression
+Execution time = 1.166978
+('LogisticRegression Train Accuracy = ', 0.99869451697127942)
+('LogisticRegression Dev Accuracy = ', 0.71601208459214505)
+('LogisticRegression Test Accuracy = ', 0.71513353115727007)
+Fitting RidgeClassifier
+Execution time = 0.470961
+('RidgeClassifier Train Accuracy = ', 0.99543080939947781)
+('RidgeClassifier Dev Accuracy = ', 0.73111782477341392)
+('RidgeClassifier Test Accuracy = ', 0.72997032640949555)
+Fitting BernoulliNB
+Execution time = 0.073984
+('BernoulliNB Train Accuracy = ', 0.49673629242819844)
+('BernoulliNB Dev Accuracy = ', 0.39274924471299094)
+('BernoulliNB Test Accuracy = ', 0.38872403560830859)
+Fitting LinearSVC
+Execution time = 0.127108
+('LinearSVC Train Accuracy = ', 0.99543080939947781)
+('LinearSVC Dev Accuracy = ', 0.73413897280966767)
+('LinearSVC Test Accuracy = ', 0.73293768545994065)
+Number of categories = 15
+Number of categories used = 14
+Fitting LogisticRegression
+Execution time = 1.294520
+('LogisticRegression Train Accuracy = ', 0.9987021414665801)
+('LogisticRegression Dev Accuracy = ', 0.7053571428571429)
+('LogisticRegression Test Accuracy = ', 0.71597633136094674)
+Fitting RidgeClassifier
+Execution time = 0.509948
+('RidgeClassifier Train Accuracy = ', 0.9954574951330305)
+('RidgeClassifier Dev Accuracy = ', 0.72619047619047616)
+('RidgeClassifier Test Accuracy = ', 0.73076923076923073)
+Fitting BernoulliNB
+Execution time = 0.075557
+('BernoulliNB Train Accuracy = ', 0.4925373134328358)
+('BernoulliNB Dev Accuracy = ', 0.38690476190476192)
+('BernoulliNB Test Accuracy = ', 0.3875739644970414)
+Fitting LinearSVC
+Execution time = 0.126288
+('LinearSVC Train Accuracy = ', 0.9954574951330305)
+('LinearSVC Dev Accuracy = ', 0.72619047619047616)
+('LinearSVC Test Accuracy = ', 0.73076923076923073)
+Number of categories = 15
+Number of categories used = 15
+Fitting LogisticRegression
+Execution time = 1.431529
+('LogisticRegression Train Accuracy = ', 0.99870466321243523)
+('LogisticRegression Dev Accuracy = ', 0.7053571428571429)
+('LogisticRegression Test Accuracy = ', 0.71386430678466073)
+Fitting RidgeClassifier
+Execution time = 0.586996
+('RidgeClassifier Train Accuracy = ', 0.9954663212435233)
+('RidgeClassifier Dev Accuracy = ', 0.72619047619047616)
+('RidgeClassifier Test Accuracy = ', 0.72861356932153387)
+Fitting BernoulliNB
+Execution time = 0.082510
+('BernoulliNB Train Accuracy = ', 0.49093264248704666)
+('BernoulliNB Dev Accuracy = ', 0.38690476190476192)
+('BernoulliNB Test Accuracy = ', 0.38348082595870209)
+Fitting LinearSVC
+Execution time = 0.137511
+('LinearSVC Train Accuracy = ', 0.9954663212435233)
+('LinearSVC Dev Accuracy = ', 0.72619047619047616)
+('LinearSVC Test Accuracy = ', 0.72861356932153387)
+
+Process finished with exit code 0

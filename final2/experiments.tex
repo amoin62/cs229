@@ -14,7 +14,7 @@ Since we are dealing with a multi-class classification problem, we first need to
 We also draw the precision-recall curve using the elements in the label indicator matrix for the binary prediction. This is also known as micro averaging. 
 Once the precision and recall metrics are obtained, we compute the harmonic mean also known as F1 score. F1 score is defined as 
 \begin{equation}
-F1 = 2 * P * R / (P + R),
+F1 = 2PR / (P + R),
 \label{eq:F1}
 \end{equation}
 where P is the precision and R is the recall.
@@ -24,7 +24,16 @@ It is used to measure the accuracy of the dev and test data. The maximum F1 scor
 The curve displays the trade-off of the precision and recall at various thresholds. As the area of the curve increases, the precision and recall increase, where the increase of precision represents the increase of true positive rate and increase of recall represents the decrease of false negative rate.
 
 
-Table~\ref{tab:accuracy} shows the accuracy measured on train and test sets. Naive Bayes classifier has the worst performance among all methods. This result is predictable as the conditional independence condition required by the Naive Bayes classifier is not satisfied in this dataset. In particular, the probability of two words happening in a comment given the category of the comment are not independent from one another. On this dataset, SVM classifier has the best performance.
+Table~\ref{tab:accuracy} shows the accuracy measured on train and test sets. Naive Bayes classifier has the worst performance among all methods. This result is predictable as the conditional independence condition required by the Naive Bayes classifier is not satisfied in this dataset. In particular, the probability of two words happening in a comment given the category of the comment are not independent from one another. On this dataset, SVM classifier has the best performance. It is observed that the other three models have reasonable accuracy while LinearSVC outperforms the rest of the models. Figure~\ref{fig:pr-lr} shows the Precision-Recall curve of Logistic Regression while Figure~\ref{fig:pr-svc} shows that of LinearSVC. It is seen that precision and recall have an inverse relationship with each other. It happens because the more positive cases an algorithm reports, the more it is likely to report all positives points of the dataset (high recall), but it can also report more false positives (lower precision) and vice versa.
+
+\begin{figure*}[tb]%
+\centering
+\begin{tabular}{cc}
+\subfloat[Precision vs. Recall for Logistic Regression \label{fig:pr-lr}]{\includegraphics[width=0.95\columnwidth]{figures/PrecisionRecall_LogisticRegression_test.png}} & 
+\subfloat[Precision vs. Recall for Linear SVC \label{fig:pr-svc}]{\includegraphics[width=0.95\columnwidth]{figures/PrecisionRecall_LinearSVC_test.png}}
+\end{tabular}
+\caption{Precision vs Recall}%
+\end{figure*}
 
 \begin{table}%
 \centering
@@ -32,35 +41,35 @@ Table~\ref{tab:accuracy} shows the accuracy measured on train and test sets. Nai
 \hline
 Model & Train Accuracy & Test Accuracy \\
 \hline
-Logistic Regression & $0.709$ & $0.709$ \\
+Logistic Regression & $0.9578$ & $0.9461$ \\
 \hline
-Bernoulli NB & $0.709$ & $0.715$ \\
+Bernoulli NB & $0.7285$ & $0.7212$ \\
 \hline
-Ridge Classifier & $0.914$ & $0.905$ \\
+Ridge Classifier & $0.9419$ & $0.9064$ \\
 \hline
-Linear SVC & $0.956$ & $0.951$ \\
+Linear SVC & $0.9712$ & $0.9527$ \\
 \hline
 \end{tabular}
 \caption{Sentiment classification accuracy of YouTube comments}
 \label{tab:accuracy}
 \end{table}
 
-Figure~\ref{fig:calibration} shows the calibration curve of the aforementioned techniques. It is observed that Naive Bayes classifier is not well-calibrated over the range $[0,1]$. From among the remaining three methods, Logistic Regression is well-calibrated over the range $[0,1]$ and is in general better calibrated than the other two methods.
-\begin{figure}[h]
+\begin{figure}%
 \centering
-\begin{minipage}{0.49\textwidth}
-\centering
-\includegraphics[width=1.0\linewidth]{figures/calibration.png}
-\caption{Word cloud for positive comments}
-\label{fig:calibration}
-\end{minipage}
-\begin{minipage}{0.49\textwidth}
-\centering
-\includegraphics[width=1.0\linewidth]{figures/dim_reduction_accuracy.png}
-\caption{Accuracy vs. project space dimensions}
-\label{fig:dim-reduction}
-\end{minipage}
+\includegraphics[width=1.0\columnwidth]{figures/calibration.png}%
+\caption{Calibration curves}%
+\label{fig:calibration}%
 \end{figure}
+
+Figure~\ref{fig:calibration} shows the calibration curve of the aforementioned techniques. It is observed that Naive Bayes classifier is not well-calibrated over the range $[0,1]$. From among the remaining three methods, Logistic Regression is well-calibrated over the range $[0,1]$ and is in general better calibrated than the other two methods.
+
+\begin{figure}%
+\centering
+\includegraphics[width=1.0\columnwidth]{figures/dim_reduction_accuracy.png}%
+\caption{Accuracy vs. project space dimensions}%
+\label{fig:dim-reduction}%
+\end{figure}
+
 \subsection{Effect of Dimensionality Reduction}
 \label{sec:dim-reduction}
 In this set of experiments, we examined how dimensionality reduction can affect the accuracy of predictions. Dimension reduction is usually applied to reduce the complexity of computations. We apply TruncatedSVD to project TF-IDF features to fewer dimensions than those of the original TF-IDF feature space. We use TruncatedSVD rather than Principal Component Analysis (PCA) because the TF-IDF features are stored in a sparse matrix by the SKLearn library which PCA cannot process. TruncatedSVD is very similar to PCA. However, the data is not centered around its mean in the former.
@@ -69,47 +78,49 @@ Figure~\ref{fig:dim-reduction} shows the accuracy of sentiment analysis with Tru
 \subsection{Category Classification}
 \label{sec:cat-exp}
 
-First, we report the results of experiments for category classification using TF-IDF comment features. In this method we try to detect the category of the video a comment is talking about using the TF-IDF features of the comments. Table~\ref{tab:comment-cat} shows the accuracy of different techniques. It is seen that the results are not as good as sentiment classification. Considering there are $15$ categories versus $3$ sentiment classes, this problem is deemed to be harder. Yet, the probability of a successful random category guess is only $1/15 \quad (6.7\%)$. Consequently, category prediction based on TF-IDF features of comments is still a big improvement over random guessing.
+First, we report the results of experiments for category classification using TF-IDF comment features. In this method we try to detect the category of the video a comment is talking about using the TF-IDF features of the comments. Table~\ref{tab:cat-comment} shows the accuracy of different techniques. It is seen that the results are not as good as sentiment classification. Considering there are $15$ categories versus $3$ sentiment classes, this problem is deemed to be harder. Yet, the probability of a successful random category guess is only $1/15 \quad (6.7\%)$. Consequently, category prediction based on TF-IDF features of comments is still a big improvement over random guessing.
 We then conducted category classification based on video tags. Table~\ref{tab:tag-comment} shows accuracy of category classification using tags. It is observed that tags can predict the category with much higher accuracy. Note that tags are considered a property of videos while TF-IDF features are a property of comments. In addition, tags are explicitly chosen to classify the videos. As a result, it is expected that are more directly relevant to the content of the video and are less noisy which lead to better accuracy in category prediction.
 
-\begin{table}%
+\begin{figure*}%
 \centering
+\begin{tabular}{cc}
+\subfloat[category classification accuracy using comments \label{tab:cat-comment}] {
 \begin{tabular}{|l|c|c|}
 \hline
 Model & Train Accuracy & Test Accuracy \\
 \hline
-Logistic Regression & $0.709$ & $0.709$ \\
+Logistic Regression & $0.6070$ & $0.5322$ \\
 \hline
-Bernoulli NB & $0.709$ & $0.715$ \\
+Bernoulli NB & $0.4554$ & $0.4161$ \\
 \hline
-Ridge Classifier & $0.914$ & $0.905$ \\
+Ridge Classifier & $0.6578$ & $0.905$ \\
 \hline
-Linear SVC & $0.956$ & $0.951$ \\
+Linear SVC & $0.6895$ & $0.5780$ \\
 \hline
-\end{tabular}
-\caption{Sentiment classification accuracy of YouTube comments}
-\label{tab:accuracy}
+\end{tabular}} &
 
-\centering
+\subfloat[category classification accuracy using tags\label{tab:cat-tag}] {
 \begin{tabular}{|l|c|c|}
 \hline
 Model & Train Accuracy & Test Accuracy \\
 \hline
-Logistic Regression & $0.709$ & $0.709$ \\
+Logistic Regression & $00.9987$ & $0.7139$ \\
 \hline
-Bernoulli NB & $0.709$ & $0.715$ \\
+Bernoulli NB & $0.4909$ & $0.3835$ \\
 \hline
-Ridge Classifier & $0.914$ & $0.905$ \\
+Ridge Classifier & $0.9955$ & $0.7286$ \\
 \hline
-Linear SVC & $0.956$ & $0.951$ \\
+Linear SVC & $0.9954$ & $0.7286$ \\
 \hline
+\end{tabular}}
 \end{tabular}
-\caption{Sentiment classification accuracy of YouTube comments}
-\label{tab:accuracy}
-\end{table}
+\caption{Category prediction of YouTube videos}%
+\label{fig:cat-prediction}%
+\end{figure*}
  
 In another experiment, we examined the effect of the number of categories on the accuracy. Intuitively, the larger the number of categories, the more difficult the classification problem is expected to be. To experiment this intuition, we created a list of categories with ascending order of each category population. We considered the first $2$ categories, that is, the two categories with greatest number of videos, ignored the remaining videos in train and test set and measured the accuracy. The same experiment was repeated for $3, 4, \ldots, 15$ categories.
 Figure~\ref{fig:cat-num-test} shows how test accuracy decreases by increasing the number of categories.
+
 \begin{figure}%
 \includegraphics[width=1.0\columnwidth]{figures/cat-num-test-acc.png}%
 \caption{Accuracy versus projection space dimensions}%

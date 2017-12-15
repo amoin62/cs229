@@ -1,0 +1,26 @@
+C:\Users\Afshin\Documents\mlvenv\Scripts\python.exe C:/Users/Afshin/Documents/CS229_Machine_Learning_Stanford_2017/cs229-project/cs229/youtube_sentiment/tags.py
+train csv read
+dev csv read
+dev csv read
+Fitting LogisticRegression
+Execution time = 1.730869
+('LogisticRegression Train Accuracy = ', 0.99774774774774777)
+('LogisticRegression Dev Accuracy = ', 0.78433734939759037)
+('LogisticRegression Test Accuracy = ', 0.77128953771289532)
+Fitting RidgeClassifier
+Execution time = 2.176773
+('RidgeClassifier Train Accuracy = ', 0.99954954954954955)
+('RidgeClassifier Dev Accuracy = ', 0.76987951807228916)
+('RidgeClassifier Test Accuracy = ', 0.75912408759124084)
+Fitting BernoulliNB
+Execution time = 0.131449
+('BernoulliNB Train Accuracy = ', 0.52657657657657653)
+('BernoulliNB Dev Accuracy = ', 0.42771084337349397)
+('BernoulliNB Test Accuracy = ', 0.43309002433090027)
+Fitting LinearSVC
+Execution time = 0.529645
+('LinearSVC Train Accuracy = ', 0.99954954954954955)
+('LinearSVC Dev Accuracy = ', 0.77349397590361446)
+('LinearSVC Test Accuracy = ', 0.76763990267639903)
+
+Process finished with exit code 0

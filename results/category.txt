@@ -1,0 +1,24 @@
+C:\Users\Afshin\Documents\mlvenv\Scripts\python.exe C:/Users/Afshin/Documents/CS229_Machine_Learning_Stanford_2017/cs229-project/cs229/youtube_sentiment/category.py
+sys:1: DtypeWarning: Columns (2,3) have mixed types. Specify dtype option on import or set low_memory=False.
+Fitting LogisticRegression
+Execution time = 880.685029
+('LogisticRegression Train Accuracy = ', 0.60708174922135849)
+('LogisticRegression Dev Accuracy = ', 0.54238634394315755)
+('LogisticRegression Test Accuracy = ', 0.53218282908513248)
+Fitting RidgeClassifier
+Execution time = 236.582615
+('RidgeClassifier Train Accuracy = ', 0.65775223102049973)
+('RidgeClassifier Dev Accuracy = ', 0.56830916758130667)
+('RidgeClassifier Test Accuracy = ', 0.55918838905336121)
+Fitting BernoulliNB
+Execution time = 13.724330
+('BernoulliNB Train Accuracy = ', 0.45537235524140601)
+('BernoulliNB Dev Accuracy = ', 0.4322684997978164)
+('BernoulliNB Test Accuracy = ', 0.41610224564950538)
+Fitting LinearSVC
+Execution time = 397.678015
+('LinearSVC Train Accuracy = ', 0.68950561236855334)
+('LinearSVC Dev Accuracy = ', 0.58615908959621055)
+('LinearSVC Test Accuracy = ', 0.57797674922377063)
+
+Process finished with exit code 0

@@ -32,21 +32,18 @@ Our goal is to classify YouTube comments into positive, negative or neutral sent
 Words that happen more frequently in positive and negative comments are shown as word clouds in Figures~\ref{fig:poscloud} and~\ref{fig:negcloud}.
 
 In Section~\ref{sec:cat-exp}, we do category classification based on tags and comments. The category labels are already available in video data.
-\begin{figure}[h]
+
+\begin{figure*}[tb]%
 \centering
-\begin{minipage}{0.49\textwidth}
-\centering
-\includegraphics[width=1.0\linewidth]{figures/pos_WordCloud.png}
-\caption{Word cloud for positive comments.}
-\label{fig:poscloud}
-\end{minipage}
-\begin{minipage}{0.49\textwidth}
-\centering
-\includegraphics[width=1.0\linewidth]{figures/neg_WordCloud.png}
-\caption{Word cloud for negative comments.}
-\label{fig:negcloud}
-\end{minipage}
-\end{figure}
+\begin{tabular}{cc}
+\subfloat[Word cloud for positive comments \label{fig:poscloud}]{\includegraphics[width=0.95\columnwidth]{figures/pos_WordCloud.png}} & 
+\subfloat[Word cloud for negative comments \label{fig:negcloud}]{\includegraphics[width=0.95\columnwidth]{figures/neg_WordCloud.png}}
+\end{tabular}
+\caption{Word cloud of common words in YouTube comments}%
+\label{fig:wordcloud}%
+%\vspace{-1.0ex}
+\end{figure*}
+
 
 \subsection{Feature Extraction}
 \label{sec:feature}
