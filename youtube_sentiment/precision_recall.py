@@ -1,12 +1,5 @@
-from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.svm import LinearSVC
-from sklearn.naive_bayes import BernoulliNB
-from sklearn.pipeline import Pipeline
 from sklearn.linear_model import RidgeClassifier, LogisticRegression
-from sklearn import decomposition
-from timeit import default_timer as timer
-from sklearn.calibration import calibration_curve
 from sklearn.metrics import precision_recall_curve
 from sklearn.metrics import average_precision_score
 from sklearn.preprocessing import label_binarize
@@ -15,7 +8,6 @@ from sentiment import read_data, fit_clf
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import sys
 
 
 def predict_sentiments(train, dev, test):
@@ -140,8 +132,6 @@ def predict_sentiments(train, dev, test):
     plt.legend(lines, labels, prop=dict(size=10))
     plt.savefig('PrecisionRecall_LogisticRegression_test.png')
     plt.show()
-
-    #RidgeClassifier
 
     dimensions = None
 
@@ -373,9 +363,11 @@ def main():
     test = pd.read_csv('../data/youtube/USComments-test-full.csv', encoding='utf8', error_bad_lines=False, usecols=fields)
     dev = pd.read_csv('../data/youtube/GBComments-test.csv', encoding='utf8', error_bad_lines=False, usecols=fields)
 
-    precison_recall = True
-    if precison_recall:
+    precision_recall = True
+    if precision_recall:
         predict_sentiments(train, dev, test)
+
+        
 if __name__ == '__main__':
     main()
 
