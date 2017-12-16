@@ -14,8 +14,8 @@ l(\phi_y,\phi_{j|y=1},...,\phi_{j|y=k}) = \prod_{i = 1}^{m} \prod_{j = 1}^{n} p(
 \end{eqnarray*}
 Maximizing the joint likelihood of the training data yields:
 \begin{eqnarray*}
-&&p(x_j^{(i)}|y^{(i)}=k) = \phi_{j|y=k}=\frac{\sum_{i = 1}^{m} 1 [x_j^{(i)} = 1 \: \Lambda \: y^{(i)}=k]}{\sum_{i = 1}^{m}1[y^{(i)}=k]}, \\
-&&p(y^{(i)}=k) = \phi_{y=k} = \frac{\sum_{i = 1}^{m} [y^{(i)}=k]}{m},
+&&p(x_j^{(i)}|y^{(i)}=k) = \phi_{j|y=k}=\frac{\sum_{i = 1}^{m} 1 \{x_j^{(i)} = 1 \: \Lambda \: y^{(i)}=k]}{\sum_{i = 1}^{m}1[y^{(i)}=k\}}, \\
+&&p(y^{(i)}=k) = \phi_{y=k} = \frac{\sum_{i = 1}^{m} 1\{y^{(i)}=k\}}{m},
 \end{eqnarray*}
 where $m$ is the number of training examples.
 Then, class label is chosen as the one with the highest posterior probability:
@@ -23,23 +23,25 @@ Then, class label is chosen as the one with the highest posterior probability:
 y = \mathrm{argmax}_k \frac{\phi_{y=k} \prod_{j = 1}^{n} \phi_{j|y}}{\sum_{k = 1}^{K} \phi_{y=k} \prod_{j = 1}^{n} \phi_{j|y}}
 \end{equation*}
 
-Multinomial Logistic Regression, also known as softmax regression is a generalization of Logistic Regression to more than $2$ classes.
+Multinomial Logistic Regression, also known as Softmax regression is a generalization of Logistic Regression to more than $2$ classes.
 Matrix of parameters $\theta$ is found maximizing the log-likelihood function defined as:
 \begin{equation*}
-	l(\theta) = \sum_{i = 1}^{m} log \prod_{j = 1}^{n} \frac{exp(\theta^Tx^{(i)})}{\sum_k exp(\theta^Tx^{(i)})}
+	%l(\theta) = \sum_{i = 1}^{m} log \prod_{j = 1}^{n} \frac{exp(\theta_{j}^Tx^{(i)})}{\sum_k exp(\theta_{j}^Tx^{(i)})}
+	l(\theta) = \sum_{i=1}^{m} log \prod_{l=1}^K \begin{pmatrix}
+\frac{exp(\theta_l^Tx^{(i)})}{\sum_{j=1}^K exp(\theta_j^Tx^{(i)})}
+\end{pmatrix}^{1\{y^{(i)}=l\}}
 \label{eq:softmax-likelihood}
 \end{equation*}
 The probability of each data point is then computed as:
 \begin{equation*}
- p(y=k|x;\theta)=\frac{exp(\theta^T_k x^{(i)})}{\sum_{j = 1}^{n} exp(\theta_j^T x^{(i)})}
+ p(y^{(i)}=k|x^{(i)};\theta)=\frac{exp(\theta^T_k x^{(i)})}{\sum_{j = 1}^{n} exp(\theta_j^T x^{(i)})}
 \label{eq:softmax-prob}
 \end{equation*}
-
 
 Ridge classification is a generalization of regularized linear regression to classification problems.
 Class probabilities are estimated by first minimizing a least squares cost function with L2 norm:
 \begin{equation*}
-\sum_{i = 1}^{m} \left\|Wx^{(i)}-y^{(i)}\right\|_2^2 + \lambda \left\|W\right\|_2^2,
+\mathrm{argmin}_{\theta}\sum_{i = 1}^{m} \left\| \theta x^{(i)}-y^{(i)}\right\|_2^2 + \lambda \left\| \theta \right\|_2^2,
 \label{eq:ridge-cost}
 \end{equation*}
 where $\lambda >= 0$ is the regularization constant.

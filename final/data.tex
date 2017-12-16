@@ -5,7 +5,7 @@ In this section we discuss the properties of the dataset we use for our experime
 \subsection{YouTube Dataset}
 \label{sec:youtubedataset}
 We apply classification techniques on a sample dataset taken from YouTube~\cite{youtubedata}. 
-IThis dataset includes $691407$ comments for $200$ most trending YouTube videos in US in a two weeks period. 
+This dataset includes $691407$ comments for $200$ most trending YouTube videos in US in a two weeks period. 
 The same source also offers a similar dataset for the most trending videos in GB. 
 We will use a fraction of this dataset as our test set for sentiment analysis. 
 The data includes comment data and video data. The comment data maps video IDs to comments and the number of likes and dislikes for the corresponding comments. The video data contains video title, channel title, category, tags, number of views, likes and dislikes and user reviews. The US videos belong to $15$ categories.
@@ -29,7 +29,7 @@ Our goal is to classify YouTube comments into positive, negative or neutral sent
 \end{cases}.
 \label{eq:sentiment}
 \end{eqnarray*}
-Statistics on the size of each class is shown in Figure~\ref{fig:datastats}.
+Statistics on the population of each class is shown in Figure~\ref{fig:datastats}.
 Words that happen more frequently in positive and negative comments are shown as word clouds in Figures~\ref{fig:poscloud} and~\ref{fig:negcloud}.
 In Section~\ref{sec:cat-exp}, we do category classification based on tags and comments. The category labels are already available in video data.
 
